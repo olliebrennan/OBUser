@@ -1,0 +1,46 @@
+<?=$this->doctype()?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?=$this->headTitle('DesignProof - Client Area')->setSeparator(' - ')->setAutoEscape(false)?>
+        <?=$this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0')?>
+
+        <?=$this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+            ->appendStylesheet($this->basePath() . '/css/bootstrap.min.css')
+            ->appendStylesheet($this->basePath() . '/css/login.css')
+            ->appendStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')?>
+
+        <?=$this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->appendFile($this->basePath() . '/js/jquery.min.js')
+            ->appendFile($this->basePath() . '/js/jquery.validate.js')?>
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+        <!-- Google Fonts call. Font Used Open Sans -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="span4"></div>
+                <div class="span4" style="margin-top: 90px;">
+                    <div class="block-unit" style="text-align: center; padding: 8px 8px 8px 8px;">
+                        <br /><br />
+                        <img src="/img/logo.png" alt="" class="img-circle">
+                        <br /><br />
+                       <?=$this->content?>
+                   </div>
+                </div>
+                <div class="span4"></div>
+            </div>
+        </div>
+        <?=$this->inlineScript()?>
+    </body>
+</html>
